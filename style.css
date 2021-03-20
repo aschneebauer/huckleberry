@@ -3,10 +3,96 @@
   font-family: 'Lato', sans-serif;
 }
 
+html {
+  font-size: 112.5%;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  font-size: var(--font-s);
 }
 
 /* Add styles here! */
+:root {
+  /* Spacing! */
+
+  --space-xs: 8px;
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+  --space-xxxl: 96px;
+  --space-xxxxl: 128px;
+
+  /* Font Size! */
+  --font-s: 1rem;
+  --font-m: 1.25rem;
+  --font-l: 1.5rem;
+  --font-xl: 2rem;
+
+  /* Colors! */
+  --pri-green: hsl(160deg, 100%, 30%);
+  --sec-gold-light: hsl(45deg, 100%, 50%);
+  --sec-gold-dark: hsl(45deg, 100%, 40%);
+  --black: hsl(0deg, 0%, 0%);
+  --grey-verydark: hsl(0deg, 0%, 10%);
+  --grey-dark: hsl(0deg, 0%, 30%);
+  --grey-medium: hsl(0deg, 0%, 40%);
+  --grey-light: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+}
+
+header {
+  border-bottom: var(--space-xs) solid var(--grey-medium);
+}
+
+header,
+main {
+  padding: var(--space-xl);
+  font-size: var(--font-l);
+}
+
+header .title,
+main .indented-heading {
+  color: var(--grey-dark);
+  font-size: var(--font-xl);
+}
+
+header p {
+  margin: var(--space-xs);
+}
+
+header p strong {
+  color: var(--pri-green);
+}
+
+main {
+  background-color: var(--grey-light);
+  padding: var(--space-xl) 0 var(--space-l) 0;
+}
+
+.card {
+  background-color: var(--white);
+  padding-left: var(--space-l);
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xl);
+}
+
+.indented-heading {
+  background-color: var(--sec-gold-light);
+  border-bottom: var(--space-xs) solid var(--sec-gold-dark);
+  width: max-content;
+  padding: var(--space-xs) var(--space-xl);
+  margin: 0 0 var(--space-xl) calc(var(--space-xl) * -1);
+}
+
+.max-width-wrapper {
+  width: fit-content;
+}
+
+main .max-width-wrapper {
+  margin: 0 auto;
+}
